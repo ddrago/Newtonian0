@@ -37,8 +37,8 @@ class Body{
   
   public void display(){
     push();
-    fill(BR, BG, BB);
-    stroke(255, 255, 100);
+    fill(c2[0], c2[1], c2[2]);
+    stroke(c3[2], c3[2], c3[2]);
     circle(this.choords.x, this.choords.y, this.r);
     pop();
   }

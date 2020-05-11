@@ -6,7 +6,7 @@ class System{
     for (int i = 0; i < n; i++){
       float mass = random(1, 20);
       //float size = pow(mass, 2);
-      float size = random(50, 100);
+      float size = 70;
       this.bodies[i] = new Body( new PVector(random(bf, width-bf), random(bf, height-bf)),  //pos
                     new PVector(random(-maxva, maxva), random(-maxva, maxva)), //speed
                     mass, size);  //mass
