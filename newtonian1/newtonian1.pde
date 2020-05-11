@@ -5,11 +5,11 @@ PGraphics pg;
 
 
 float[] c1, c2, c3;
-float opacity = random(10);
+float opacity = 2; //random(3, 3.5);
 
 System s;
 int n = int(random(2, 10));  //number of planets
-float bf = 100; //buffer space from window edge
+float bf = 320; //buffer space from window edge
 float maxva = 1; //maximum initial speed of each planet
 
 void setup(){
@@ -53,9 +53,9 @@ void drawBackground(boolean seethrough){
 }
 
 void generateColours(){
-  float[] colour1 = {82, 220, 255}; //random(100, 255), random(100, 255), random(100, 255)};
-  float[] colour2 = {colour1[1], colour1[2], colour1[0]};
-  float[] colour3 = {colour1[2], colour1[0], colour1[1]};
+  float[] colour1 = {random(200, 255), random(50, 150), random(20, 50)}; //random(100, 255), random(100, 255), random(100, 255)};
+  float[] colour2 = {random(200, 255), random(200, 255), random(20, 50)}; //colour1[1], colour1[2], colour1[0]};
+  float[] colour3 = {random(20, 50), random(150, 220), random(200, 255)}; //colour1[2], colour1[0], colour1[1]};
   switch(int(random(3))){
     case 0:
         c1 = colour1;
@@ -74,4 +74,6 @@ void generateColours(){
       break;
   }
   print("c1: ", colour1[0], ", c2: ", colour1[1], ", c3: ", colour1[2], "\n");
+  print("c1: ", colour2[0], ", c2: ", colour2[1], ", c3: ", colour2[2], "\n");
+  print("c1: ", colour3[0], ", c2: ", colour3[1], ", c3: ", colour3[2], "\n");
 }
